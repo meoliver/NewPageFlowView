@@ -65,6 +65,7 @@
 
 /** 开启定时器 */
 - (void)startTimer {
+    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.autoTime target:self selector:@selector(autoNextPage) userInfo:nil repeats:YES];
 }
 
@@ -117,12 +118,12 @@
 
                     cell.coverView.alpha = (delta / _pageSize.width) * (1 - _minimumPageAlpha);
 
-                    CGFloat inset = (_pageSize.width * (1 - _minimumPageScale)) * (delta / _pageSize.width)/2.0;
+                    CGFloat inset = (_pageSize.height * (1 - _minimumPageScale)) * (delta / _pageSize.width)/2.0;
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
                 } else {
 
                     cell.coverView.alpha = _minimumPageAlpha;
-                    CGFloat inset = _pageSize.width * (1 - _minimumPageScale) / 2.0 ;
+                    CGFloat inset = _pageSize.height * (1 - _minimumPageScale) / 2.0 ;
                     cell.frame = UIEdgeInsetsInsetRect(originCellFrame, UIEdgeInsetsMake(inset, inset, inset, inset));
                 }
 
@@ -328,10 +329,10 @@
         // 重置_scrollView的contentSize
         switch (self.orientation) {
             case NewPageFlowViewOrientationHorizontal://横向
-                _scrollView.frame = CGRectMake(0, 0, _pageSize.width, _pageSize.height);
+                _scrollView.frame = CGRectMake(10, 0, _pageSize.width, _pageSize.height);
                 _scrollView.contentSize = CGSizeMake(_pageSize.width * _pageCount,_pageSize.height);
-                CGPoint theCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-                _scrollView.center = theCenter;
+//                CGPoint theCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+//                _scrollView.center = theCenter;
 
                 if (self.orginPageCount > 1) {
                     //滚到第二组

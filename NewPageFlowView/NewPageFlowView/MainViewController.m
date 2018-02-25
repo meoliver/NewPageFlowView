@@ -27,8 +27,8 @@
     // Do any additional setup after loading the view.
 
     // 创建图片数组
-    for (int index = 0; index < 5; index++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"Yosemite0%d",index]];
+    for (int index = 0; index < 6; index++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"wm_0%d",index]];
         [self.imageArray addObject:image];
     }
 
@@ -43,12 +43,12 @@
 }
 
 - (void)setupNewPageFlowView {
-    NewPageFlowView *pageFlowView = [[NewPageFlowView alloc] initWithFrame:CGRectMake(0, 64, K_Width, (K_Width - 74) * 9 / 16 + 20)];
+    NewPageFlowView *pageFlowView = [[NewPageFlowView alloc] initWithFrame:CGRectMake(0, 200, K_Width, 80 + 20)];
     pageFlowView.backgroundColor = [UIColor whiteColor];
     pageFlowView.delegate = self;
     pageFlowView.dataSource = self;
-    pageFlowView.minimumPageAlpha = 0.4;
-    pageFlowView.minimumPageScale = 0.9;
+    pageFlowView.minimumPageAlpha = 1;
+    pageFlowView.minimumPageScale = 0.8;
 
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, pageFlowView.frame.size.height - 20 - 8, K_Width, 8)];
     pageFlowView.pageControl = pageControl;
@@ -65,7 +65,7 @@
 
 #pragma mark NewPageFlowView Delegate
 - (CGSize)sizeForPageInFlowView:(NewPageFlowView *)flowView {
-    return CGSizeMake(K_Width - 74, (K_Width - 74) * 9 / 16);
+    return CGSizeMake(K_Width - 25, 80);
 }
 
 #pragma mark NewPageFlowView Datasource
@@ -76,8 +76,8 @@
 - (UIView *)flowView:(NewPageFlowView *)flowView cellForPageAtIndex:(NSInteger)index {
     BannerIndexView *bannerView = (BannerIndexView *)[flowView dequeueReusableCell];
     if (!bannerView) {
-        bannerView = [[BannerIndexView alloc] initWithFrame:CGRectMake(0, 0, K_Width - 74, (K_Width - 74) * 9 / 16)];
-        bannerView.layer.cornerRadius = 4;
+        bannerView = [[BannerIndexView alloc] initWithFrame:CGRectMake(0, 0, K_Width - 25, 80)];
+        bannerView.layer.cornerRadius = 10;
         bannerView.layer.masksToBounds = YES;
     }
 
