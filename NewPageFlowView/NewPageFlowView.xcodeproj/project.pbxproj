@@ -12,8 +12,8 @@
 		86772B0F1D62EF6200D8AA03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B0E1D62EF6200D8AA03 /* AppDelegate.m */; };
 		86772B171D62EF6200D8AA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86772B161D62EF6200D8AA03 /* Assets.xcassets */; };
 		86772B1A1D62EF6200D8AA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86772B181D62EF6200D8AA03 /* LaunchScreen.storyboard */; };
-		86772B261D62EFAA00D8AA03 /* BannerIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B231D62EFAA00D8AA03 /* BannerIndexView.m */; };
-		86772B271D62EFAA00D8AA03 /* NewPageFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B251D62EFAA00D8AA03 /* NewPageFlowView.m */; };
+		86772B261D62EFAA00D8AA03 /* WMBannerIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B231D62EFAA00D8AA03 /* WMBannerIndexView.m */; };
+		86772B271D62EFAA00D8AA03 /* WMNewPageFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B251D62EFAA00D8AA03 /* WMNewPageFlowView.m */; };
 		86772B2A1D62EFF200D8AA03 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86772B291D62EFF200D8AA03 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +26,10 @@
 		86772B161D62EF6200D8AA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86772B191D62EF6200D8AA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86772B1B1D62EF6200D8AA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86772B221D62EFAA00D8AA03 /* BannerIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerIndexView.h; sourceTree = "<group>"; };
-		86772B231D62EFAA00D8AA03 /* BannerIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerIndexView.m; sourceTree = "<group>"; };
-		86772B241D62EFAA00D8AA03 /* NewPageFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPageFlowView.h; sourceTree = "<group>"; };
-		86772B251D62EFAA00D8AA03 /* NewPageFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPageFlowView.m; sourceTree = "<group>"; };
+		86772B221D62EFAA00D8AA03 /* WMBannerIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBannerIndexView.h; sourceTree = "<group>"; };
+		86772B231D62EFAA00D8AA03 /* WMBannerIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBannerIndexView.m; sourceTree = "<group>"; };
+		86772B241D62EFAA00D8AA03 /* WMNewPageFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewPageFlowView.h; sourceTree = "<group>"; };
+		86772B251D62EFAA00D8AA03 /* WMNewPageFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewPageFlowView.m; sourceTree = "<group>"; };
 		86772B281D62EFF200D8AA03 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		86772B291D62EFF200D8AA03 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,10 +97,10 @@
 		86772B211D62EFAA00D8AA03 /* NewPageFlowView */ = {
 			isa = PBXGroup;
 			children = (
-				86772B221D62EFAA00D8AA03 /* BannerIndexView.h */,
-				86772B231D62EFAA00D8AA03 /* BannerIndexView.m */,
-				86772B241D62EFAA00D8AA03 /* NewPageFlowView.h */,
-				86772B251D62EFAA00D8AA03 /* NewPageFlowView.m */,
+				86772B221D62EFAA00D8AA03 /* WMBannerIndexView.h */,
+				86772B231D62EFAA00D8AA03 /* WMBannerIndexView.m */,
+				86772B241D62EFAA00D8AA03 /* WMNewPageFlowView.h */,
+				86772B251D62EFAA00D8AA03 /* WMNewPageFlowView.m */,
 			);
 			path = NewPageFlowView;
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86772B261D62EFAA00D8AA03 /* BannerIndexView.m in Sources */,
+				86772B261D62EFAA00D8AA03 /* WMBannerIndexView.m in Sources */,
 				86772B0F1D62EF6200D8AA03 /* AppDelegate.m in Sources */,
-				86772B271D62EFAA00D8AA03 /* NewPageFlowView.m in Sources */,
+				86772B271D62EFAA00D8AA03 /* WMNewPageFlowView.m in Sources */,
 				86772B2A1D62EFF200D8AA03 /* MainViewController.m in Sources */,
 				86772B0C1D62EF6200D8AA03 /* main.m in Sources */,
 			);

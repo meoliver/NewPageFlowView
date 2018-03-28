@@ -1,6 +1,6 @@
 //
-//  NewPageFlowView.h
-//  NewPageFlowView
+//  WMNewPageFlowView.h
+//  WMNewPageFlowView
 //
 //  Created by MrJalen on 16/8/4.
 //  Copyright © 2016年 lianjiang. All rights reserved.
@@ -16,7 +16,7 @@ typedef enum{
     NewPageFlowViewOrientationVertical
 }NewPageFlowViewOrientation;
 
-@interface NewPageFlowView : UIView <UIScrollViewDelegate>
+@interface WMNewPageFlowView : UIView <UIScrollViewDelegate>
 
 @property (nonatomic, assign) NewPageFlowViewOrientation orientation;//默认为横向
 
@@ -82,14 +82,14 @@ typedef enum{
 /**
  *  单个子控件的Size
  */
-- (CGSize)sizeForPageInFlowView:(NewPageFlowView *)flowView;
+- (CGSize)sizeForPageInFlowView:(WMNewPageFlowView *)flowView;
 
 @optional
 
 /**
  *  滚动到了某一列
  */
-- (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPageFlowView *)flowView;
+- (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(WMNewPageFlowView *)flowView;
 
 @end
 
@@ -99,11 +99,11 @@ typedef enum{
 /**
  *  返回显示View的个数
  */
-- (NSInteger)numberOfPagesInFlowView:(NewPageFlowView *)flowView;
+- (NSInteger)numberOfPagesInFlowView:(WMNewPageFlowView *)flowView;
 
 /**
  *  给某一列设置属性
  */
-- (UIView *)flowView:(NewPageFlowView *)flowView cellForPageAtIndex:(NSInteger)index;
+- (UIView *)flowView:(WMNewPageFlowView *)flowView cellForPageAtIndex:(NSInteger)index;
 
 @end

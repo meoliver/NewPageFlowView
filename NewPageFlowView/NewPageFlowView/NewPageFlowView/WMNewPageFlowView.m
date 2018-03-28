@@ -1,15 +1,15 @@
 //
-//  NewPageFlowView.m
-//  NewPageFlowView
+//  WMNewPageFlowView.m
+//  WMNewPageFlowView
 //
 //  Created by MrJalen on 16/8/4.
 //  Copyright © 2016年 lianjiang. All rights reserved.
 //
 
-#import "NewPageFlowView.h"
-#import "BannerIndexView.h"
+#import "WMNewPageFlowView.h"
+#import "WMBannerIndexView.h"
 
-@interface NewPageFlowView ()
+@interface WMNewPageFlowView ()
 
 /** 当前页数 */
 @property (nonatomic, assign, readwrite) NSInteger currentPageIndex;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation NewPageFlowView
+@implementation WMNewPageFlowView
 
 //============================== 私有方法 ==============================//
 #pragma mark -
@@ -108,7 +108,7 @@
         case NewPageFlowViewOrientationHorizontal:{
             CGFloat offset = _scrollView.contentOffset.x;
             for (NSInteger i = self.visibleRange.location; i < self.visibleRange.location + _visibleRange.length; i++) {
-                BannerIndexView *cell = [_cells objectAtIndex:i];
+                WMBannerIndexView *cell = [_cells objectAtIndex:i];
                 CGFloat origin = cell.frame.origin.x;
                 CGFloat delta = fabs(origin - offset);
 
@@ -134,7 +134,7 @@
             CGFloat offset = _scrollView.contentOffset.y;
 
             for (NSInteger i = self.visibleRange.location; i < self.visibleRange.location + _visibleRange.length; i++) {
-                BannerIndexView *cell = [_cells objectAtIndex:i];
+                WMBannerIndexView *cell = [_cells objectAtIndex:i];
                 CGFloat origin = cell.frame.origin.y;
                 CGFloat delta = fabs(origin - offset);
 
@@ -373,7 +373,7 @@
 }
 
 - (UIView *)dequeueReusableCell {
-    BannerIndexView *cell = [_reusableCells lastObject];
+    WMBannerIndexView *cell = [_reusableCells lastObject];
     if (cell) {
         [_reusableCells removeLastObject];
     }

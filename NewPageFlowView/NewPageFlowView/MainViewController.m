@@ -1,14 +1,14 @@
 //
 //  MainViewController.m
-//  NewPageFlowView
+//  WMNewPageFlowView
 //
 //  Created by MrJalen on 16/8/16.
 //  Copyright © 2016年 lianjiang. All rights reserved.
 //
 
 #import "MainViewController.h"
-#import "NewPageFlowView.h"
-#import "BannerIndexView.h"
+#import "WMNewPageFlowView.h"
+#import "WMBannerIndexView.h"
 
 #define K_Width  [UIScreen mainScreen].bounds.size.width
 #define K_Height [UIScreen mainScreen].bounds.size.height
@@ -43,8 +43,8 @@
 }
 
 - (void)setupNewPageFlowView {
-    NewPageFlowView *pageFlowView = [[NewPageFlowView alloc] initWithFrame:CGRectMake(0, 200, K_Width, 80 + 20)];
-    pageFlowView.backgroundColor = [UIColor whiteColor];
+    WMNewPageFlowView *pageFlowView = [[WMNewPageFlowView alloc] initWithFrame:CGRectMake(0, 200, K_Width, 80)];
+    pageFlowView.backgroundColor = [UIColor yellowColor];
     pageFlowView.delegate = self;
     pageFlowView.dataSource = self;
     pageFlowView.minimumPageAlpha = 1;
@@ -64,19 +64,19 @@
 }
 
 #pragma mark NewPageFlowView Delegate
-- (CGSize)sizeForPageInFlowView:(NewPageFlowView *)flowView {
+- (CGSize)sizeForPageInFlowView:(WMNewPageFlowView *)flowView {
     return CGSizeMake(K_Width - 25, 80);
 }
 
 #pragma mark NewPageFlowView Datasource
-- (NSInteger)numberOfPagesInFlowView:(NewPageFlowView *)flowView {
+- (NSInteger)numberOfPagesInFlowView:(WMNewPageFlowView *)flowView {
     return self.imageArray.count;
 }
 
-- (UIView *)flowView:(NewPageFlowView *)flowView cellForPageAtIndex:(NSInteger)index {
-    BannerIndexView *bannerView = (BannerIndexView *)[flowView dequeueReusableCell];
+- (UIView *)flowView:(WMNewPageFlowView *)flowView cellForPageAtIndex:(NSInteger)index {
+    WMBannerIndexView *bannerView = (WMBannerIndexView *)[flowView dequeueReusableCell];
     if (!bannerView) {
-        bannerView = [[BannerIndexView alloc] initWithFrame:CGRectMake(0, 0, K_Width - 25, 80)];
+        bannerView = [[WMBannerIndexView alloc] initWithFrame:CGRectMake(0, 0, K_Width - 25, 80)];
         bannerView.layer.cornerRadius = 10;
         bannerView.layer.masksToBounds = YES;
     }
@@ -97,7 +97,7 @@
     NSLog(@"点击了第%ld张图",(long)index + 1);
 }
 
-- (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(NewPageFlowView *)flowView {
+- (void)didScrollToPage:(NSInteger)pageNumber inFlowView:(WMNewPageFlowView *)flowView {
 
     NSLog(@"滚动到了第%ld页",pageNumber);
 }

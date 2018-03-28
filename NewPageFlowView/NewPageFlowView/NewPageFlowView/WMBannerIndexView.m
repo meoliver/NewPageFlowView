@@ -1,14 +1,13 @@
 //
-//  BannerIndexView.m
-//  NewPageFlowView
+//  WMBannerIndexView.m
+//  womaiw
 //
-//  Created by MrJalen on 16/8/4.
-//  Copyright © 2016年 lianjiang. All rights reserved.
-//
+//  Created by oliver on 2018/2/26.
+//  Copyright © 2018年 中粮我买网. All rights reserved.
 
-#import "BannerIndexView.h"
+#import "WMBannerIndexView.h"
 
-@implementation BannerIndexView
+@implementation WMBannerIndexView
 
 /** 初始化 */
 - (instancetype)initWithFrame:(CGRect)frame {

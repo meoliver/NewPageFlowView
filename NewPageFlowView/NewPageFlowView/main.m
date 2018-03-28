@@ -1,6 +1,6 @@
 //
 //  main.m
-//  NewPageFlowView
+//  WMNewPageFlowView
 //
 //  Created by LJKJ on 16/8/16.
 //  Copyright © 2016年 lianjiang. All rights reserved.
